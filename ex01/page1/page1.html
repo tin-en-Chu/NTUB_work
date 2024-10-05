@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My audio's page</title>
+    <link rel="icon" href="../media/images.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .mp4Size {
+            width: 320px;
+            height: 240px;
+            margin: 10px 0;
+        }
+        body {
+            padding: 20px; 
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My audio's page</h1>
+
+        <!-- 頁首連結 -->
+        <a href="../page2/page2.html" class="btn btn-primary">我的自傳</a>
+
+        <hr> <!-- 分隔线 -->
+
+        <!-- 音乐文件嵌入 -->
+        <h2>音樂播放</h2>
+        <audio controls>
+            <source src="../media/shape-of-you-official-music-video.mp3" type="audio/mpeg">
+            您的浏览器不支持音频播放。
+        </audio>
+
+        <hr>
+
+        <!-- 影片文件嵌入 -->
+        <h2>影片播放</h2>
+        <video class="mp4Size" controls>
+            <source src="../media/uptown-funk-official-video-ft-bruno-mars---mark-ronson.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+        </video>
+
+        <hr>
+
+        <!-- 使用embed标签嵌入视频 -->
+        <h2>嵌入影片播放</h2>
+        <embed type="video/webm" src="../media/uptown-funk-official-video-ft-bruno-mars---mark-ronson.mp4" class="mp4Size">
+
+        <hr>
+
+        <!-- YouTube影片嵌入 -->
+        <h2>YouTube影片</h2>
+        <iframe class="mp4Size" src="https://www.youtube.com/embed/OPf0YbXqDm0" title="Mark Ronson - Uptown Funk (Official Video) ft. Bruno Mars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <hr>
+
+        <!-- 頁尾連結 -->
+        <a href="../index.html" class="btn btn-primary">回到首頁</a>
+    </div>
+</body>
+
+</html>
