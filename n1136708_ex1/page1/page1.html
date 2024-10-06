@@ -8,65 +8,57 @@
     <link rel="icon" href="../media/images.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .mp4Size {
-            width: 320px;
-            height: 240px;
-            margin: 10px 0;
-        }
-        body {
-            padding: 20px; 
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
         <h1>My audio's page</h1>
-
         <!-- 頁首連結 -->
         <a href="../page2/page2.html" class="btn btn-primary">我的自傳</a>
-
         <hr> <!-- 分格線 -->
-
         <!-- 音樂嵌入 -->
-        <h2>音樂播放</h2>
+        <h2>音樂播放(Audio tag)</h2>
         <audio controls>
             <source src="../media/shape-of-you-official-music-video.mp3" type="audio/mpeg">
         </audio>
-
         <hr>
-
-        <!-- 影片文件嵌入 -->
-        <h2>影片播放</h2>
+        <!-- 影片video嵌入 -->
+        <h2>影片播放(video tag)</h2>
         <video class="mp4Size" controls>
             <source src="../media/uptown-funk-official-video-ft-bruno-mars---mark-ronson.mp4" type="video/mp4">
         </video>
-
         <hr>
-
-        <!-- 使用embed標籤嵌入视频 -->
-        <h2>嵌入影片播放</h2>
+        <!-- 使用embed標籤嵌入影片 -->
+        <h2>嵌入影片播放(embed tag)</h2>
         <embed type="video/webm" src="../media/uptown-funk-official-video-ft-bruno-mars---mark-ronson.mp4" class="mp4Size">
-
         <hr>
-
         <!-- YouTube影片嵌入 -->
-        <h2>YouTube影片</h2>
+        <h2>YouTube影片(iframe tag)</h2>
         <iframe class="mp4Size" src="https://www.youtube.com/embed/OPf0YbXqDm0" title="Mark Ronson - Uptown Funk (Official Video) ft. Bruno Mars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
         <hr>
-
         <!-- 頁尾連結 -->
-        <a href="#top" class="btn btn-primary" id="btn">回到最上面</a>
+        <a href="../index.html" class="btn btn-primary" id="btn">回到首頁</a>
     </div>
 </body>
 <style>
     h2{
         font-weight: bold;
+    }
+    .mp4Size {
+        width: 320px;
+        height: 240px;
+        margin: 10px 0;
+    }
+    #btn{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; 
+    }
+    body {
+        padding: 20px; 
+    }
+    h1 {
+        margin-bottom: 20px;
     }
 </style>
 </html>
