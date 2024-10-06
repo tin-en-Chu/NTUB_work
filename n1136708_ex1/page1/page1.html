@@ -18,47 +18,56 @@
         <hr> <!-- 分格線 -->
         <!-- 音樂嵌入 -->
         <h2>音樂播放(Audio tag)</h2>
-        <audio controls>
+        <audio controls loop>
             <source src="../media/shape-of-you-official-music-video.mp3" type="audio/mpeg">
         </audio>
         <hr>
         <!-- 影片video嵌入 -->
         <h2>影片播放(video tag)</h2>
-        <video class="mp4Size" controls>
+        <video class="mp4Size" controls loop>
             <source src="../media/uptown-funk-official-video-ft-bruno-mars---mark-ronson.mp4" type="video/mp4">
         </video>
         <hr>
         <!-- 使用embed標籤嵌入影片 -->
         <h2>嵌入影片播放(embed tag)</h2>
-        <embed type="video/webm" src="../media/uptown-funk-official-video-ft-bruno-mars---mark-ronson.mp4" class="mp4Size">
+        <embed type="video/webm" src="../media/uptown-funk-official-video-ft-bruno-mars---mark-ronson.mp4" loop="true"
+            class="mp4Size"  id="embed_tag" autostart="false">
         <hr>
         <!-- YouTube影片嵌入 -->
         <h2>YouTube影片(iframe tag)</h2>
-        <iframe class="mp4Size" src="https://www.youtube.com/embed/OPf0YbXqDm0" title="Mark Ronson - Uptown Funk (Official Video) ft. Bruno Mars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/7ycbPf6m-7c?si=2xbkjFhoiQg95kMN" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="mp4Size"></iframe>
         <hr>
         <!-- 頁尾連結 -->
         <a href="../index.html" class="btn btn-primary" id="btn">回到首頁</a>
     </div>
 </body>
 <style>
-    h2{
+    h2 {
         font-weight: bold;
     }
+
     .mp4Size {
         width: 320px;
         height: 240px;
         margin: 10px 0;
     }
-    #btn{
+
+    #btn {
         display: flex;
         justify-content: center;
-        margin-top: 20px; 
+        margin-top: 20px;
     }
+
     body {
-        padding: 20px; 
+        padding: 20px;
     }
+
     h1 {
         margin-bottom: 20px;
     }
 </style>
+
 </html>
