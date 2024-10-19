@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +16,14 @@
             width: 128px;
             height: 64px;
         }
+        body > table {
+            width: 100%; 
+            table-layout:fixed;
+        }
     </style>
 
     <body>
-        <table style="width: 100%; table-layout:fixed">
+        <table>
             <tr>
                 <th>
                     <img src="./media/icon2.jpeg" alt="icon2">
@@ -66,7 +72,7 @@
             <tr>
                 <td>左上</td>
                 <td rowspan="2" colspan="2">
-                    <form action="http://httpbin.org" method="get">
+                    <form action="http://httpbin.org/get" method="get">
                         <label for="username">
                             名稱:
                         </label>
@@ -75,27 +81,27 @@
                         <label for="password">
                             密碼:
                         </label>
-                        <input type="text" id="password" name="password" >
+                        <input type="password" id="password" name="password" >
                         <br>
                         <label for="today">
                             今天日期:
                         </label>
                         <input type="date" id="today" name="today">
                         <br>
-                        <label>興趣:
-                            <input type="checkbox" id="savor1" name="savor1" value="music">
+                        <label for="habit">興趣:
+                            <input type="checkbox" id="savor1" name="habit" value="music">
                             <label for="savor1">
                                 音樂
                             </label>
-                            <input type="checkbox" id="savor2" name="savor2" value="movie">
+                            <input type="checkbox" id="savor2" name="habit" value="movie">
                             <label for="savor2"> 
                                 電影
                             </label>
-                            <input type="checkbox" id="savor3" name="savor3" value="playBall">
+                            <input type="checkbox" id="savor3" name="habit" value="playBall">
                             <label for="savor3"> 
                                 打球
                             </label>
-                            <input type="checkbox" id="savor4" name="savor4" value="sleep">
+                            <input type="checkbox" id="savor4" name="habit" value="sleep">
                             <label for="savor4"> 
                                 睡覺
                             </label>
@@ -115,4 +121,5 @@
             </tr>
         </table>
     </body>
+
 </html>
