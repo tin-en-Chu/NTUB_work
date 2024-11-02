@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>作業ex3</title>
+        <style>
+            /*ol部份,滑鼠移上去到<li>項後後改成"藍底黃字"*/ 
+            td:nth-child(2) > ol > li:hover {
+                color: yellow;
+                background-color: blue;
+            }
+            /*ul部份,滑鼠移上去到<li>項後改成"淺藍底紅字"*/ 
+            td:nth-child(1) > ul > li:hover {
+                color: red;
+                background-color: lightblue;
+            }
+            input:focus {
+                border-color: black; /* 獲得焦點時的邊框顏色 */
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 獲得焦點時的陰影效果 */
+                outline: none; /* 去除默認的焦點樣式 */
+            }
+            #backImg{
+                background: url("./media/icon2.jpeg") center no-repeat;
+                background-size: contain;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <table border="1" width="100%">
+            <tr>
+                <th width="25%">
+                    <img src="./media/icon2.jpeg" alt="icon2" width="128" height="64">
+                </th>
+                <th width="75%" colspan="3" id="backImg">
+                    <strong>我的首頁</strong>
+                </th>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <ul>
+                        <li>第1項</li>
+                        <li>第2項</li>
+                        <li>第3項</li>
+                        <li>第4項</li>
+                    </ul>
+                </td>
+                <td width="25%">
+                    <ol type="i">
+                        <li>第1項</li>
+                        <li>第2項</li>
+                        <li>第3項</li>
+                        <li>第4項</li>
+                    </ol>
+                </td>
+                <td width="50%" colspan="2">
+                    <ol type="a">
+                        <li>第1項
+                            <ul type="circle">
+                                <li>第1-1項</li>
+                                <li>第1-2項</li>
+                            </ul>
+                        </li>
+                        <li>第2項
+                            <ol type="1">
+                                <li>第2-1項
+                                    <ul type="square">
+                                        <li>第3-1項</li>
+                                        <li>第3-2項</li>
+                                    </ul>
+                                </li>
+                                <li>第2-2項</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%" style="background-color:#deb887 ; font-family: 'Papyrus', sans-serif;font-size:1.2em ;font-weight:bold">The spectacle before us was indeed sublime.</td>
+                <td width="50%" rowspan="2" colspan="2">
+                    <form action="http://httpbin.org/get" method="get">
+                        <fieldset>
+                            <legend>基本資料</legend>
+                            名稱:
+                            <input type="text" id="username" name="username" value="David">
+                            <br>
+                            密碼:
+                            <input type="password" id="password" name="password">
+                            <br>
+                            今天日期:
+                            <input type="date" id="today" name="today">
+                        </fieldset>
+                        <fieldset>
+                            <legend>興趣:</legend>
+                            <input type="checkbox" id="music" name="habbit" value="music">
+                            <label for="music">音樂</label>
+                            <input type="checkbox" id="movie" name="habbit" value="movie">
+                            <label for="movie">電影</label>
+                            <input type="checkbox" id="playball" name="habbit" value="playball">
+                            <label for="playball">打球</label>
+                            <input type="checkbox" id="sleep" name="habbit" value="sleep">
+                            <label for="sleep">睡覺</label>
+                        </fieldset>
+                        <input type="reset" value="重設">
+                        <input type="submit" value="提交">
+                    </form>
+                </td>
+                <td width="25%" style="background-color:#ffc0cb;font-family: 'MS Outlook', sans-serif;">The sky was cloudless and of a deep dark blue.</td>
+            </tr>
+            <tr>
+                <td width="25%" style="background-color:#00ffff;font-family: 'Vivaldi', sans-serif;">Waves flung themselves at the blue evening</td>
+                <td width="25%" style="background-color:#7cfc00;font-family: 'Tempus Sans ITC', sans-serif;">It was going to be a lonely trip back.</td>
+            </tr>
+            <tr>
+                <td width="100%" colspan="4">我是頁腳</td>
+            </tr>
+        </table>
+    </body>
+
+</html>
