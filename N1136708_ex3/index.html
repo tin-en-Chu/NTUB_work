@@ -6,26 +6,52 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>作業ex3</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <style>
-            /*ol部份,滑鼠移上去到<li>項後後改成"藍底黃字"*/ 
-            td:nth-child(2) > ol > li:hover {
+            /*(1)*/
+            tr:nth-child(1) > th:nth-child(2){
+                background: url("./media/icon2.jpeg") center no-repeat;
+                background-size: 5%;
+                text-align: center;
+                background-position: center;
                 color: yellow;
-                background-color: blue;
             }
-            /*ul部份,滑鼠移上去到<li>項後改成"淺藍底紅字"*/ 
-            td:nth-child(1) > ul > li:hover {
+            /*(2)*/ 
+            ul > li:hover {
                 color: red;
                 background-color: lightblue;
             }
-            input:focus {
-                border-color: black; /* 獲得焦點時的邊框顏色 */
-                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 獲得焦點時的陰影效果 */
-                outline: none; /* 去除默認的焦點樣式 */
+            /*(3)*/ 
+            ol > li:hover {
+                color: yellow;
+                background-color: blue;
             }
-            #backImg{
-                background: url("./media/icon2.jpeg") center no-repeat;
-                background-size: contain;
-                text-align: center;
+            /*(5)*/ 
+            tr:nth-child(3) > td:nth-child(1) {
+                background-color: #deb887;
+                font-family: 'Papyrus', sans-serif;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            /*(7)*/
+            tr:nth-child(3) > td:nth-child(3) {
+                background-color:#ffc0cb;
+                font-family: 'MS Outlook', sans-serif;
+            }
+            /*(8)*/
+            tr:nth-child(4) > td:nth-child(1) {
+                background-color:#00ffff;
+                font-family: 'Vivaldi', sans-serif;
+            }
+            /*(9)*/
+            tr:nth-child(4) > td:nth-child(2) {
+                background-color:#7cfc00;
+                font-family: 'Tempus Sans ITC', sans-serif;
+            }
+            /*(9)*/
+            tr:nth-child(1) > th:nth-child(1) > img{
+                width:128px; 
+                height:64px;
             }
         </style>
     </head>
@@ -34,9 +60,9 @@
         <table border="1" width="100%">
             <tr>
                 <th width="25%">
-                    <img src="./media/icon2.jpeg" alt="icon2" width="128" height="64">
+                    <img src="./media/icon2.jpeg" alt="icon2">
                 </th>
-                <th width="75%" colspan="3" id="backImg">
+                <th width="75%" colspan="3">
                     <strong>我的首頁</strong>
                 </th>
             </tr>
@@ -80,18 +106,18 @@
                 </td>
             </tr>
             <tr>
-                <td width="25%" style="background-color:#deb887 ; font-family: 'Papyrus', sans-serif;font-size:1.2em ;font-weight:bold">The spectacle before us was indeed sublime.</td>
+                <td width="25%">The spectacle before us was indeed sublime.</td>
                 <td width="50%" rowspan="2" colspan="2">
                     <form action="http://httpbin.org/get" method="get">
                         <fieldset>
                             <legend>基本資料</legend>
-                            名稱:
+                            <label for="username">名稱:</label>                            
                             <input type="text" id="username" name="username" value="David">
                             <br>
-                            密碼:
+                            <label for="password">密碼:</label> 
                             <input type="password" id="password" name="password">
                             <br>
-                            今天日期:
+                            <label for="today">今天日期:</label> 
                             <input type="date" id="today" name="today">
                         </fieldset>
                         <fieldset>
@@ -109,11 +135,11 @@
                         <input type="submit" value="提交">
                     </form>
                 </td>
-                <td width="25%" style="background-color:#ffc0cb;font-family: 'MS Outlook', sans-serif;">The sky was cloudless and of a deep dark blue.</td>
+                <td width="25%">The sky was cloudless and of a deep dark blue.</td>
             </tr>
             <tr>
-                <td width="25%" style="background-color:#00ffff;font-family: 'Vivaldi', sans-serif;">Waves flung themselves at the blue evening</td>
-                <td width="25%" style="background-color:#7cfc00;font-family: 'Tempus Sans ITC', sans-serif;">It was going to be a lonely trip back.</td>
+                <td width="25%">Waves flung themselves at the blue evening</td>
+                <td width="25%">It was going to be a lonely trip back.</td>
             </tr>
             <tr>
                 <td width="100%" colspan="4">我是頁腳</td>
