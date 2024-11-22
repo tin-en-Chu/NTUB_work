@@ -1,0 +1,66 @@
+    /* 通用樣式 */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "aside main"
+            "footer footer";
+        grid-template-columns: 0 1fr; /*因為aside pageload時不展開，故設為0*/
+        grid-template-rows: 1.5fr 1fr 8fr 1fr;
+        gap: 10px;
+        height: 100vh;
+        transition: grid-template-columns 0.5s ease; /* 增加滑出的細膩度 */
+    }
+
+    .header {
+        grid-area: header;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+
+    .section {
+        grid-area: section;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .aside {
+        grid-area: aside;
+        background-color: #f4f4f4;
+        overflow: hidden;
+        border: 1px solid #ddd;
+        width: 250px; /* 展開時的default寬度 */
+        transform: translateX(-250px); /*用處:元素以參考點為中心，X軸位移m距離*/
+        transition: transform 0.5s ease; /* 根據aside滑出的速度 */
+    }
+
+    .aside.open {
+        transform: translateX(0); /*用處:元素以參考點為中心，X軸位移m距離*/
+    }
+    
+    .main {
+        grid-area: main;
+        background-color: #fff;
+        padding: 20px;/* 內容集中 */
+        border: 1px solid #ddd;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+  
+    
